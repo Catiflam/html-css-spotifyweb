@@ -19,6 +19,8 @@ body {
 .asaide {
 	width: 300px;
 	background-color: black;
+	display: flex;
+	flex-direction: column;
 }
 
 .content-intro {
@@ -43,19 +45,90 @@ body {
 	background-color: rgb(40, 27, 27);
 	display: flex;
 	justify-content: space-between;
+	color: white;
 }
 
-#player .foot-col .foot-icon {
+#player .col {
+	padding: 0.5;
+}
+
+#player .foot-col .song-info {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+#player .foot-img {
+	height: 50px;
+}
+
+#player .song-info,
+.foot-play .foot-icon {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 15px;
-	color: white;
 }
 
-/* DEBUG */
-.border {
-	border: 2px solid red;
+#player .foot-icon-bar {
+	display: flex;
+	gap: 15px;
+}
+
+#player .foot-play .foot-icon-bar {
+	display: flex;
+	height: 50px;
+	gap: 15px;
+}
+
+#player .progress-bar-container {
+	flex-grow: 1;
+}
+
+.foot-icon-bar > div {
+	display: flex;
+	align-items: center;
+}
+
+.progress-bar {
+	display: block;
+	width: 300px;
+	height: 3px;
+	background-color: rgb(125, 131, 137);
+}
+
+.progress-bar-small {
+	display: block;
+	width: 80px;
+	height: 3px;
+	background-color: rgb(125, 131, 137);
+}
+
+.progress-bar > .progress {
+	display: block;
+	height: 3px;
+	background-color: white;
+	border-radius: 2px;
+	width: 20%;
+	position: relative;
+}
+
+.progress-bar > .progress > .ball {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: white;
+
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	transform: translate(-50%, -50%);
+}
+
+#player .setting {
+	display: flex;
+	align-items: center;
+	gap: 15px;
 }
 
 /* RESPONSIVE */
