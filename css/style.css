@@ -6,26 +6,94 @@
 
 body {
 	background-color: #282828;
+	color: rgb(215, 220, 226);
 }
 
 /* LAYOUT */
 
-/* MAIN */
+a {
+	color: lightgrey;
+	text-decoration: none;
+}
+
+a:hover {
+	color: white;
+	cursor: pointer;
+}
+
+ul {
+	list-style-type: none;
+}
+
+i:hover {
+	color: white;
+	cursor: pointer;
+}
+
 #content {
 	height: calc(100vh - 100px);
 	display: flex;
 }
 
-.asaide {
+.content-intro {
+	width: calc(100% - 300px);
+	overflow: auto;
+}
+
+#asaide {
 	width: 300px;
 	background-color: black;
 	display: flex;
 	flex-direction: column;
+	overflow: auto;
+	padding: 1rem;
 }
 
-.content-intro {
-	width: calc(100% - 300px);
-	overflow: auto;
+#asaide div:last-child {
+	margin-top: auto;
+}
+
+#asaide .box-logo img {
+	line-height: 80px;
+	width: 80%;
+}
+
+#asaide .box-links li {
+	margin: 10px;
+}
+
+#asaide .box-playlist li {
+	margin: 10px;
+}
+
+#asaide .box-links img {
+	line-height: 10px;
+	width: 20px;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+#asaide .box-playlist h3 {
+	text-transform: uppercase;
+	margin: 10px;
+}
+
+#asaide .playlist-button {
+	width: 50px;
+	height: 50px;
+	background-color: lightgrey;
+	font-size: 20px;
+}
+#asaide .box-user img {
+	width: 20px;
+}
+
+#asaide .box-profile img {
+	width: 20px;
+	height: 20px;
+	background-color: rgb(150, 147, 147);
+	border-radius: 50%;
+	overflow: hidden;
 }
 
 .head {
@@ -37,7 +105,6 @@ body {
 }
 
 .library {
-	color: white;
 }
 
 #player {
@@ -45,7 +112,7 @@ body {
 	background-color: rgb(40, 27, 27);
 	display: flex;
 	justify-content: space-between;
-	color: white;
+	color: rgb(217, 225, 232);
 }
 
 #player .col {
@@ -94,7 +161,7 @@ body {
 	display: block;
 	width: 300px;
 	height: 3px;
-	background-color: rgb(125, 131, 137);
+	background-color: rgb(157, 162, 166);
 }
 
 .progress-bar-small {
