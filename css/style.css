@@ -96,12 +96,26 @@ i:hover {
 	overflow: hidden;
 }
 
-.head {
+#head {
 	height: 100px;
 	background-color: black;
 	position: sticky;
 	top: 0;
 	left: 0;
+}
+#head .head-upgrade {
+	text-align: right;
+	margin-top: 10px;
+}
+
+#head .button-upgrade {
+	width: 200px;
+	height: 30px;
+	background-color: black;
+	padding: 10px 10px;
+	color: white;
+	border: 2px solid white;
+	border-radius: 20px;
 }
 
 .library {
