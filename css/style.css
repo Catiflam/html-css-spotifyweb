@@ -118,7 +118,8 @@ i:hover {
 	border-radius: 20px;
 }
 
-.library {
+#library .library-link {
+	display: flex;
 }
 
 #player {
