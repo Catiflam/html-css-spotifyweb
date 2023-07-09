@@ -11,6 +11,10 @@ body {
 
 /* LAYOUT */
 
+.row {
+	display: flex;
+}
+
 a {
 	color: lightgrey;
 	text-decoration: none;
@@ -47,10 +51,7 @@ i:hover {
 	flex-direction: column;
 	overflow: auto;
 	padding: 1rem;
-}
-
-#asaide div:last-child {
-	margin-top: auto;
+	justify-content: space-between;
 }
 
 #asaide .box-logo img {
@@ -96,6 +97,11 @@ i:hover {
 	overflow: hidden;
 }
 
+.asaide-xs,
+.asaide-sx {
+	display: none;
+}
+
 #head {
 	height: 100px;
 	background-color: black;
@@ -118,8 +124,60 @@ i:hover {
 	border-radius: 20px;
 }
 
-#library .library-link {
+#library .lib-link {
 	display: flex;
+	justify-content: center;
+}
+
+#library .lib-list {
+	display: flex;
+	gap: 15px;
+	cursor: pointer;
+}
+
+#library .lib-title {
+	margin-top: 30px;
+}
+
+#library h2 {
+	font-size: 16px;
+	padding: 5px;
+	margin: 8px auto;
+}
+
+#library p {
+	font-size: 10px;
+}
+
+#library h1 {
+	margin: 10px;
+}
+
+#library .col {
+	width: calc(100% / 6);
+	padding: 5px;
+}
+
+#library .col .card .strange {
+	max-width: 100%;
+}
+
+#library .col .card .strange-circle {
+	max-width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+#library .things {
+	max-width: 100%;
+}
+
+#library .hide {
+	display: none;
+}
+
+#library .row .col .hide:hover {
+	display: block;
 }
 
 #player {
@@ -214,13 +272,33 @@ i:hover {
 }
 
 /* RESPONSIVE */
-@media screen and(max-width: 576px) {
-	.asaide {
-		width: 50px;
+@media screen and (max-width: 576px) {
+	#asaide {
+		width: 60px;
 	}
 	.content-intro {
-		width: calc(100% - 50px);
+		width: calc(100% - 60px);
+	}
+	.box-links,
+	.box-playlist,
+	.box-user,
+	.box-logo {
+		display: none;
+	}
+
+	.asaide-xs,
+	.asaide-sx {
+		display: flex;
+		gap: 10px;
+		width: 20px;
+		flex-direction: column;
 	}
 }
-@media screen and(max-width: 768px) {
+@media screen and (max-width: 768px) {
+	#asaide {
+		width: 100px;
+	}
+	.content-intro {
+		width: calc(100% - 100px);
+	}
 }
