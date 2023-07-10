@@ -40,12 +40,12 @@ i:hover {
 }
 
 .content-intro {
-	width: calc(100% - 300px);
+	width: calc(100% - 250px);
 	overflow: auto;
 }
 
 #asaide {
-	width: 300px;
+	width: 250px;
 	background-color: black;
 	display: flex;
 	flex-direction: column;
@@ -152,8 +152,12 @@ i:hover {
 #library h1 {
 	margin: 10px;
 }
+#library .row {
+	display: flex;
+	flex-wrap: wrap;
+}
 
-#library .col {
+#library .row .col {
 	width: calc(100% / 6);
 	padding: 5px;
 }
@@ -272,6 +276,28 @@ i:hover {
 }
 
 /* RESPONSIVE */
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 922px) {
+	#library .row .col {
+		width: calc(100% / 4);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#library .row .col {
+		width: 50%;
+	}
+	#asaide {
+		width: 100px;
+	}
+	.content-intro {
+		width: calc(100% - 100px);
+	}
+}
+
 @media screen and (max-width: 576px) {
 	#asaide {
 		width: 60px;
@@ -293,12 +319,7 @@ i:hover {
 		width: 20px;
 		flex-direction: column;
 	}
-}
-@media screen and (max-width: 768px) {
-	#asaide {
-		width: 100px;
-	}
-	.content-intro {
-		width: calc(100% - 100px);
+	#library .row .col {
+		width: 100%;
 	}
 }
