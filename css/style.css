@@ -296,6 +296,12 @@ i:hover {
 	.content-intro {
 		width: calc(100% - 100px);
 	}
+	#player .setting {
+		display: none;
+	}
+	#player .song-info {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 576px) {
@@ -321,5 +327,11 @@ i:hover {
 	}
 	#library .row .col {
 		width: 100%;
+	}
+	#player .setting {
+		display: none;
+	}
+	#player .song-info {
+		display: none;
 	}
 }
